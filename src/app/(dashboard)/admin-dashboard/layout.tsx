@@ -1,7 +1,10 @@
 import React from "react";
 
-function layout() {
-  return <div>Admin Root Layout</div>;
-}
+export const metadata = {
+  title: "Admin Dashboard",
+  description: "Administrative controls and reports",
+};
 
-export default layout;
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return <main>{children}</main>;
+}

@@ -1,7 +1,10 @@
 import React from "react";
 
-function layout() {
-  return <div>Employe Root Layout</div>;
-}
+export const metadata = {
+  title: "Employee Dashboard",
+  description: "This is the employee dashboard page.",
+};
 
-export default layout;
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return <main>{children}</main>;
+}
