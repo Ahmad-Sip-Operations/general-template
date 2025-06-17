@@ -1,6 +1,6 @@
 # scripts/
 
-Dummy User -> demo@example.com | demo123
+Dummy User -> demo@example.com | 123 (run npm run init-db)
 
 Utility scripts for automating tasks like database seeding, dummy data generation, and environment setup.
 
