@@ -158,7 +158,7 @@ const LogInComponent = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center mt-2">
+      <div className="flex justify-between items-center mt-6 mb-2">
         <p className="font-semibold text-[10px] text-[#7E7E7E] cursor-pointer">
           Forget password?
         </p>
@@ -169,7 +169,7 @@ const LogInComponent = () => {
       </div>
       <button
         onClick={handleSubmit}
-        className="cursor-pointer flex justify-center w-full text-[#7E7E7E] bg-white py-2 font-semibold rounded-lg mt-2"
+        className="cursor-pointer flex justify-center w-full text-[#7E7E7E] bg-white py-2 font-semibold rounded-lg"
       >
         {loading ? "" : "Log in"}
         {loading && (
