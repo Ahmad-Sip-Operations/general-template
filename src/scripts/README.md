@@ -1,5 +1,7 @@
 # scripts/
 
+Dummy User -> demo@example.com | demo123
+
 Utility scripts for automating tasks like database seeding, dummy data generation, and environment setup.
 
 These scripts are especially useful during development and testing, helping simulate real-world scenarios without manual effort.
