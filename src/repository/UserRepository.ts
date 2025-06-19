@@ -1,13 +1,13 @@
 import mysql from 'mysql2/promise';
-import { UsersDM } from '@/models/user/UserModel';
-import { DbConfigDM } from '@/types/config/DbConfigType';
+import { UsersModel } from '@/models/user/UserModel';
+import { DbConfigType } from '@/types/config/DbConfigType';
 
 export class UserRepository {
   static async getUserByEmail(
     email: string,
     tableName: string,
-    dbConfig: DbConfigDM
-  ): Promise<UsersDM | null> {
+    dbConfig: DbConfigType
+  ): Promise<UsersModel | null> {
     let connection;
 
     try {
@@ -17,7 +17,7 @@ export class UserRepository {
         [email]
       );
 
-      return rows.length ? (rows[0] as UsersDM) : null;
+      return rows.length ? (rows[0] as UsersModel) : null;
 
     } catch (error: any) {
       if (error.code === 'ER_NO_SUCH_TABLE') {
