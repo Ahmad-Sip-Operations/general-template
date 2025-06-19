@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import mysql from "mysql2/promise";
 import dotenv from "dotenv";
-import bcrypt from "bcryptjs";
+import { hashPassword } from "@/utils/hash";
 
 dotenv.config();
 
@@ -10,11 +10,11 @@ const runSQLScript = async () => {
   const sqlPath = path.resolve(__dirname, "../scripts/register/register.sql");
   let sql = fs.readFileSync(sqlPath, "utf8");
 
-  // 🔐 Dynamically hash the plaintext password
-  const plainPassword = "123"; // or get this from env if needed
-  const hashedPassword = await bcrypt.hash(plainPassword, 10);
+  // Dynamically hash the plaintext password
+  const plainPassword = "123";
+  const hashedPassword = await hashPassword(plainPassword); // use utility
 
-  // Replace a placeholder in the SQL file with the hashed password
+  // Replace the placeholder in SQL with the hashed password
   sql = sql.replace("__HASHED_PASSWORD__", hashedPassword);
 
   try {

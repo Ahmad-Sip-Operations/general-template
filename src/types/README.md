@@ -5,7 +5,7 @@
 - 🧩 What Is the types/ Folder?
 - It includes:
 
-  - Global interfaces (e.g., User, Role, APIResponse)
+  - Global interfaces (e.g., Database Config)
   - Shared enums and type utilities
   - `.d.ts` files for ambient type definitions
 
